@@ -29,7 +29,7 @@ Since you cloned an official NSS repository, you don't have permissions to push 
 ## Testing the Public
 
 1. Create a `scripts/TestFacility.js` module.
-1. Define a variable in the module to have the hold of the primary key for each piece of pottery _(i.e. the `id` property)_. It should have an initial value of 1.
+1. Define a variable in the module to have the hold of the primary key for each patient _(i.e. the `id` property)_. It should have an initial value of 1.
 1. Define and export a function named `testPerson`.
 1. The `testPerson` function must accept the following values as input _(i.e. it needs parameters)_, in the following order.
     1. First name of the person being tested (e.g. "Kelly", "Peter")
