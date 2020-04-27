@@ -1,8 +1,8 @@
 # Beginner JavaScript Review
 
-## Coronavirus Tracker
+## Bacteria Tracker
 
-In this exercise, your task to build a workflow for testing people for the coronavirus infection and then making that people who test poritive are put into isolation.
+In this exercise, your task to build a workflow for testing people for a bacterial infection and then making sure that a clinic has a report of people who have it.
 
 ## Setup
 
@@ -19,7 +19,7 @@ In this exercise, your task to build a workflow for testing people for the coron
 Since you cloned an official NSS repository, you don't have permissions to push code to it. What you need to do is push to your own repository. Part of this assessment includes verifying that you make a minimum of 4 commits and pushes of your code.
 
 1. Go to your Github page.
-1. Create a new repository named `coronavirus`.
+1. Create a new repository named `clinic`.
 1. Copy the connection URL _(remember to make sure you use the SSH format, not HTTPS)_.
 1. In your terminal, make sure you are currently in the project directory.
 1. Run the command: `git remote remove origin`
@@ -59,7 +59,7 @@ Once you have it working, test 5 people in the `main.js` module.
 1. Define and export a function named `diagnose` that is responsible providing a diagnosis for a tested person.
 1. The function must accept the following values as input _(i.e. it needs parameters)_, in the following order.
     1. An object representing a person who was tested with the `testPerson` function.
-    1. A number specifying how many days the person has been symptomatic.
+    1. A number specifying how many days the person has been exhibiting symptoms.
 1. The function must add a new property of `diagnosed` with the value of `true` to the object. If you don't remember, you can easily [add new properties to objects in JavaScript](https://www.dyn-web.com/tutorials/object-literal/properties.php).
 1. The function must also add a new property of `infected` to the object.
     1. If the person's temperature is above 101 and the number of days the person has been symptomatic is greater than, or equal to, 4 then `infected` property must have a value of `true`.
