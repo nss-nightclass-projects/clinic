@@ -9,24 +9,12 @@ In this exercise, your task to build a workflow for testing people for a bacteri
 1. Open your terminal and `cd` to your workspace directory.
 1. Clone this project.
 1. Once the project is cloned, `cd coronavirus` and then run `npm install`.
-1. Once the installations are complete, run the `npm run test` command (_see animation below_). You will see all of the tests for your code - which ones pass, and which ones fail. As soon as you make changes to your code, the tests will run automatically, so keep this terminal window open while you are working on this project. When you need to stop working on it, use the `Ctrl+C` keyboard shortcut to stop the tests from running.
+1. Once the installations are complete, run the `npm run test` command. You will see all of the tests for your code - which ones pass, and which ones fail. As soon as you make changes to your code, the tests will run automatically, so keep this terminal window open while you are working on this project. When you need to stop working on it, use the `Ctrl+C` keyboard shortcut to stop the tests from running.
 
 
 > **Note:** All of the code for this project will be created the `src` directory of the project. Open a new terminal session, and `cd` to the project directory again. Then you can `cd src` to change to that directory in your terminal. To check what's already in the `src` directory, use the `ls` command to see its contents.
 
-## Pushing Your Code
-
-Since you cloned an official NSS repository, you don't have permissions to push code to it. What you need to do is push to your own repository. Part of this assessment includes verifying that you make a minimum of 4 commits and pushes of your code.
-
-1. Go to your Github page.
-1. Create a new repository named `clinic`.
-1. Copy the connection URL _(remember to make sure you use the SSH format, not HTTPS)_.
-1. In your terminal, make sure you are currently in the project directory.
-1. Run the command: `git remote remove origin`
-1. Run the command: `git remote add origin paste_connection_url_here`
-
-
-## Testing the Public
+## Testing the Patients
 
 1. Create a `scripts/TestFacility.js` module.
 1. Define a variable in the module to have the hold of the primary key for each patient _(i.e. the `id` property)_. It should have an initial value of 1.
@@ -96,7 +84,8 @@ Your next task is to create HTML representations of the people who have been tes
 1. Create a `scripts/PatientList.js` module.
 1. Define and export a `PatientList` function.
 1. The `PatientList` function must import that array of patients from the from the `Clinic.js` module.
-1. The `PatientList` function must convert each object in the array to an HTML representation string. Use the following template to generate the representations. Recall the `${}` syntax for interpolating JavaScript variables into string templates.
+1. The `PatientList` function must convert each object in the array to an HTML representation string.
+Use the following template to generate the representations. Recall the `${}` syntax for interpolating JavaScript variables into string templates.
     ```html
     <section class="patient" id="patient--1">
         <h2 class="patient__name">Doug</h2>
@@ -110,11 +99,14 @@ Your next task is to create HTML representations of the people who have been tes
         </div>
     </section>
     ```
-1. Once all patient objects have been converted to HTML representation strings, append the inner HTML of the `<article>` element you created above with that string.
+1. The function must put all of the HTML representations into a single string.
+1. The function then must return that single string that has all of the patient HTML representation in it.
+1. In the `main.js` module, invoke the `PatientList` component function. Take the string of HTML representations that it returns and update the inner HTML of article element you created in `index.html`. You need to remember how to get a reference to DOM element in JavaScript and then assign it some HTML.
 
 #### Checking Your Work
 
-In the `main.js` module, invoke the `PatientList` component function. Make sure your web server is running, and then visit http://localhost:8080 and you should see your list of diagnosed patient. It should look similiar to this.
+
+Make sure your web server is running, and then visit http://localhost:8080 and you should see your list of diagnosed patient. It should look similiar to this.
 
 ![](./patients.png)
 
