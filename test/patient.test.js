@@ -1,5 +1,5 @@
 import { testPerson } from "../src/scripts/TestFacility.js"
-import { diganose } from "../src/scripts/Clinic.js"
+import { diagnose } from "../src/scripts/Clinic.js"
 
 
 let person = null
@@ -7,7 +7,7 @@ let person = null
 describe('Person is tested and has an identifier', () => {
     beforeAll(() => {
         person = testPerson("Doug", 65, 102)
-        person = diganose(person, 4)
+        person = diagnose(person, 4)
     })
 
     test('Person has correct properties', () => {
@@ -23,7 +23,7 @@ describe('Person is tested and has an identifier', () => {
 describe('Testing a patient with infected conditions', () => {
     beforeAll(() => {
         person = testPerson("Doug", 65, 102)
-        person = diganose(person, 4)
+        person = diagnose(person, 4)
     })
 
     test('Person is diagnosed', () => {
@@ -38,7 +38,7 @@ describe('Testing a patient with infected conditions', () => {
 describe('Testing a patient with high temperature but not symptomatic long enough', () => {
     beforeAll(() => {
         person = testPerson("Doug", 65, 102)
-        person = diganose(person, 2)
+        person = diagnose(person, 2)
     })
 
     test('Person is diagnosed', () => {
@@ -53,7 +53,7 @@ describe('Testing a patient with high temperature but not symptomatic long enoug
 describe('Testing a patient with low temperature and not symptomatic long enough', () => {
     beforeAll(() => {
         person = testPerson("Doug", 65, 99)
-        person = diganose(person, 2)
+        person = diagnose(person, 2)
     })
 
     test('Person is diagnosed', () => {
@@ -72,9 +72,9 @@ test('Patients are rendered to DOM', async () => {
     let mary = testPerson("Mary", 37, 100)
     let candace = testPerson("Candace", 42, 103)
 
-    doug = diganose(doug, 4)
-    mary = diganose(mary, 2)
-    candace = diganose(candace, 2)
+    doug = diagnose(doug, 4)
+    mary = diagnose(mary, 2)
+    candace = diagnose(candace, 2)
 
     let browser = await puppeteer.launch({
         headless: true

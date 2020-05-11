@@ -7,7 +7,7 @@ let doug = testPerson()
 
 
 // Diagnose each person at the clinic
-doug = diganose()
+doug = diagnose()
 
 
 // Invoke the component function that renders the HTML list of patients
