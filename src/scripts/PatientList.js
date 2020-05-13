@@ -2,7 +2,7 @@ import { usePatients } from "./Clinic.js"
 
 export const PatientList = () => {
     const patients = usePatients()
-    document.querySelector(".patients").innerHTML = patients
+    return patients
         .map(p => `
         <section class="patient" id="patient--${p.id}">
             <h2 class="patient__name">${p.firstName}</h2>

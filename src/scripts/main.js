@@ -1,6 +1,6 @@
 // Imports go first
 import { testPerson } from "./TestFacility.js"
-import { diganose, usePatients } from "./Clinic.js"
+import { diagnose, usePatients } from "./Clinic.js"
 import { PatientList } from "./PatientList.js"
 
 
@@ -12,9 +12,9 @@ let candace = testPerson("Candace", 42, 103)
 
 
 // Diagnose each person at the clinic
-doug = diganose(doug, 4)
-mary = diganose(mary, 2)
-candace = diganose(candace, 2)
+doug = diagnose(doug, 4)
+mary = diagnose(mary, 2)
+candace = diagnose(candace, 2)
 
 const patients = usePatients()
 console.log(patients)

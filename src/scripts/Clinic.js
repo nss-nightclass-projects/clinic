@@ -2,7 +2,7 @@ const testedPatients = []
 
 export const usePatients = () => testedPatients.slice()
 
-export const diganose = (person, days) => {
+export const diagnose = (person, days) => {
     person.diagnosed = true
 
     if (person.temperature > 101 && days >= 4) {
