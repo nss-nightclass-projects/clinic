@@ -79,8 +79,8 @@ Your next task is to create HTML representations of the people who have been tes
 ### Create Patient HTML
 
 1. Create a `scripts/PatientList.js` module.
-1. In the `PatientList` module define and export a `PatientList` function.
-1. The `PatientList` function must get the array of patients from the from the `Clinic.js` module.
+1. In the `PatientList` module define and export a `patientList` function.
+1. The `patientList` function must get the array of patients from the from the `Clinic.js` module.
 1. The `PatientList` function must convert each object in the array to an HTML representation string.
 The resulting HTML should look like the following example. Recall the `${}` syntax for interpolating JavaScript variables into string templates.
     ```html
@@ -98,7 +98,7 @@ The resulting HTML should look like the following example. Recall the `${}` synt
     ```
 1. The function must put all of the HTML representations into a single domString. Recall that there are ways to turn an array's values into a single string.
 1. The function then must return that single string that has all of the patient HTML representation in it.
-1. In the `main.js` module, invoke the `PatientList` component function. Take the string of HTML representations that it returns and update the inner HTML of the article element you created in `index.html`. You need to remember how to get a reference to DOM element in vanilla JavaScript (no jQuery!!!!) and then assign it some HTML.
+1. In the `main.js` module, invoke the `patientList` component function. Take the string of HTML representations that it returns and update the inner HTML of the article element you created in `index.html`. You need to remember how to get a reference to DOM element in vanilla JavaScript (no jQuery!!!!) and then assign it some HTML.
 
 #### Checking Your Work
 
