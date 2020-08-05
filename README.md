@@ -15,8 +15,7 @@ In this exercise, your task is to build a workflow for testing people for a bact
 
 ## Testing the Patients
 
-1. Create a `scripts/TestFacility.js` module.
-1. Define a variable in the module to hold a number that you can use when setting the primary key for each person you create _(i.e. the `id` property)_. It should have an initial value of 1. Use this when setting the id property on the person. You will need to increase this value by one after each new person is created.
+1. In the `TestFacility` module define a variable in the to hold a number that you can use when setting the primary key for each person you create _(i.e. the `id` property)_. It should have an initial value of 1. Use this when setting the id property on the person. You will need to increase this value by one after each new person is created.
 1. Define and export a function named `testPerson`.
 1. The `testPerson` function must accept the following values as input _(i.e. it needs parameters)_, in the following order.
     1. First name of the person being tested (e.g. "Kelly", "Peter")
@@ -40,8 +39,7 @@ Once you have it working, test 5 people in the `main.js` module.
 
 ## Clinical Consultation
 
-1. Define a `scripts/Clinic.js` module.
-1. Define a variable in the module that will store the people objects after they have been diagnosed in the clinic. Its initial value should be an empty array.
+1. In the `Clinic` module define a variable in the that will store the people objects after they have been diagnosed in the clinic. Its initial value should be an empty array.
 1. Define and export a function named `usePatients` which should return the array of diagnosed patients.
 1. Define and export a function named `diagnose` that is responsible for providing a diagnosis for a tested person.
 1. The function must accept the following values as input _(i.e. it needs parameters)_, in the following order.
@@ -81,8 +79,8 @@ Your next task is to create HTML representations of the people who have been tes
 ### Create Patient HTML
 
 1. Create a `scripts/PatientList.js` module.
-1. Define and export a `PatientList` function.
-1. The `PatientList` function must import that array of patients from the from the `Clinic.js` module.
+1. In the `PatientList` module define and export a `PatientList` function.
+1. The `PatientList` function must get the array of patients from the from the `Clinic.js` module.
 1. The `PatientList` function must convert each object in the array to an HTML representation string.
 The resulting HTML should look like the following example. Recall the `${}` syntax for interpolating JavaScript variables into string templates.
     ```html
@@ -98,13 +96,13 @@ The resulting HTML should look like the following example. Recall the `${}` synt
         </div>
     </section>
     ```
-1. The function must put all of the HTML representations into a single string. Recall that there are ways to turn an array's values into a single string.
+1. The function must put all of the HTML representations into a single domString. Recall that there are ways to turn an array's values into a single string.
 1. The function then must return that single string that has all of the patient HTML representation in it.
-1. In the `main.js` module, invoke the `PatientList` component function. Take the string of HTML representations that it returns and update the inner HTML of the article element you created in `index.html`. You need to remember how to get a reference to DOM element in JavaScript and then assign it some HTML.
+1. In the `main.js` module, invoke the `PatientList` component function. Take the string of HTML representations that it returns and update the inner HTML of the article element you created in `index.html`. You need to remember how to get a reference to DOM element in vanilla JavaScript (no jQuery!!!!) and then assign it some HTML.
 
 #### Checking Your Work
 
-Make sure your web server is running, and then visit http://localhost:<yourPort#> and you should see your list of diagnosed patients. It should look similiar to this.
+Make sure your web server (`hs`, going old school) is running, and then visit http://localhost:<yourPort#> and you should see your list of diagnosed patients. It should look similiar to this.
 
 ![](./patients.png)
 

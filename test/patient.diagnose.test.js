@@ -1,11 +1,11 @@
-import testPerson from "../src/scripts/TestFacility.js"
+import testFacility from "../src/scripts/TestFacility.js"
 import clinic  from "../src/scripts/Clinic.js"
 
 let person = null
 
 describe('Testing a patient with infected conditions', () => {
   beforeAll(() => {
-      person = testPerson("Doug", 65, 102)
+      person = testFacility.testPerson("Doug", 65, 102)
       person = clinic.diagnose(person, 4)
   })
 
@@ -20,7 +20,7 @@ describe('Testing a patient with infected conditions', () => {
 
 describe('Testing a patient with high temperature but not symptomatic long enough', () => {
   beforeAll(() => {
-      person = testPerson("Doug", 65, 102)
+      person = testFacility.testPerson("Doug", 65, 102)
       person = clinic.diagnose(person, 2)
   })
 
@@ -35,7 +35,7 @@ describe('Testing a patient with high temperature but not symptomatic long enoug
 
 describe('Testing a patient with low temperature and not symptomatic long enough', () => {
   beforeAll(() => {
-      person = testPerson("Doug", 65, 99)
+      person = testFacility.testPerson("Doug", 65, 99)
       person = clinic.diagnose(person, 2)
   })
 

@@ -1,11 +1,11 @@
-import testPerson from "../src/scripts/TestFacility.js"
+import testFacility from "../src/scripts/TestFacility.js"
 import clinic  from "../src/scripts/Clinic.js"
 
 let person = null
 
 describe('Person is tested and has an identifier', () => {
   beforeAll(() => {
-      person = testPerson("Doug", 65, 102)
+      person = testFacility.testPerson("Doug", 65, 102)
       person = clinic.diagnose(person, 4)
   })
 
