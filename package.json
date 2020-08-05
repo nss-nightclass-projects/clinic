@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest --verbose --watchAll"
+    "test-patient-testing": "jest test/patient.testing.test.js --verbose --watchAll",
+    "test-patient-diagnose": "jest test/patient.diagnose.test.js --verbose --watchAll",
+    "test-patient-render": "jest test/patient.render.test.js --verbose --watchAll"
   },
   "repository": {
     "type": "git",

@@ -1,20 +1,23 @@
 import testFacility from "../src/scripts/TestFacility.js"
-import clinic  from "../src/scripts/Clinic.js"
-
-let person = null
 
 describe('Person is tested and has an identifier', () => {
-  beforeAll(() => {
-      person = testFacility.testPerson("Doug", 65, 102)
-      person = clinic.diagnose(person, 4)
-  })
-
   test('Person has correct properties', () => {
-      expect(
-          person
-      )
-          .toMatchObject(
-              { firstName: "Doug", age: 65, temperature: 102, id: 1 }
-          )
-  })
+    const personOne = testFacility.testPerson('Doug', 65, 102);
+    expect(personOne).toMatchObject({
+      firstName: 'Doug',
+      age: 65,
+      temperature: 102,
+      id: 1,
+    });
+  });
+
+  test('Person has incremented id', () => {
+    const personTwo = testFacility.testPerson('Sally', 32, 98);
+    expect(personTwo).toMatchObject({
+      firstName: 'Sally',
+      age: 32,
+      temperature: 98,
+      id: 2,
+    });
+  });
 })
