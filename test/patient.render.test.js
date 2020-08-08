@@ -1,19 +1,19 @@
-import testPerson from "../src/scripts/TestFacility.js"
+import testFacility from "../src/scripts/TestFacility.js"
 import clinic  from "../src/scripts/Clinic.js"
 import patientList  from "../src/scripts/PatientList.js"
 
 
 test('Patients are rendered to DOM', async () => {
-  let doug = testPerson("Doug", 65, 102)
-  let mary = testPerson("Mary", 37, 100)
-  let candace = testPerson("Candace", 42, 103)
+  let doug = testFacility.testPerson("Doug", 65, 102)
+  let mary = testFacility.testPerson("Mary", 37, 100)
+  let candace = testFacility.testPerson("Candace", 42, 103)
 
   doug = clinic.diagnose(doug, 4)
   mary = clinic.diagnose(mary, 2)
   candace = clinic.diagnose(candace, 2)
 
 
-  let constructedDOM = patientList()
+  let constructedDOM = patientList.patientList()
 
   constructedDOM = constructedDOM.replace(/\n/g, "")
   constructedDOM = constructedDOM.replace(/\s{2,}/g, "")
